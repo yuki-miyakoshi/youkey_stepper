@@ -1,0 +1,4 @@
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getStepperBit	KEYWORD2
