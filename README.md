@@ -2,30 +2,30 @@
 
 # youkey_stepper
 
-This is a library for stepper motors for Arduino and microcontrollers.
+This is a library for stepper motors for Arduino and microcontrollers. 
 Arduinoやマイコン用のステッピングモータ用ライブラリです。
 
-This makes it easy to change the excitation scheme of multiple running stepping motors and adjust the direction and angle of rotation of each.
+This makes it easy to change the excitation scheme of multiple running stepping motors and adjust the direction and angle of rotation of each. 
 動作中に複数のステッピングモーターの励磁方式を変更し、それぞれの回転方向や角度を簡単に調整することができます。
 
 # Function Description
 
 ## int youkey_getStepperBit(`int motorPinNumber`);
-Function to get information whether the stepper motor should rotate or not
+Function to get information whether the stepper motor should rotate or not 
 ステッピングモータが回転するべきかどうかの情報を取得する関数
 
 ### Arguments: `int motorPinNumber` (number the motors, e.g., 0 for motor 1, 1 for motor 2, 2 for motor 3)
-Note: Up to 3 motors can run at the same time.
+Note: Up to 3 motors can run at the same time. 
 引数:int motorPinNumber モータの番号(モータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
 注意:同時に動かせるモータは３個までです
 
 ### RETURN VALUE:
-The four bool values totaling whether the motor should rotate or not. Example: If motor #0 is {true,false,false,fals}, then 8 (0b1000 in binary) Refer to examples/stepper/stepper.ino for details.
+The four bool values totaling whether the motor should rotate or not. Example: If motor #0 is {true,false,false,fals}, then 8 (0b1000 in binary) Refer to examples/stepper/stepper.ino for details. 
 返り値:
 モータが回転するべきかどうかのbool値が4つ合計された状態で出てきます。例:0番のモータが{true,false,false,fals}であれば、8(2進数で0b1000) 詳しくはexamples/stepper/stepper.inoを参照してください。
 
 ## void youkey_turnStepperMotor(`int excitation, _Bool isForward, int motorPinNumber`);
-Function to rotate a stepper motor
+Function to rotate a stepper motor 
 ステッピングモーターを回転させる関数
 
 ### Argument: `int excitation` Excitation method 
