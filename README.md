@@ -1,5 +1,4 @@
 ![](https://img.shields.io/github/license/yuki-miyakoshi/youkey_stepper)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/yuki-miyakoshi/youkey_stepper)
 
 # youkey_stepper
 
