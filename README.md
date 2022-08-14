@@ -10,6 +10,10 @@ C言語で記述されているので16F1827などのPICマイコン等でも使
 The excitation system of multiple stepper motors can be easily changed even during operation, and the direction of rotation of each can also be adjusted.<br>
 複数のステッピングモーターの励磁方式を動作中であっても簡単に変更することができ、また、それぞれの回転方向も調整することができます。
 
+I, yuki-miyakoshi, publish the youkey series to improve my own technical skills.
+It is released under the MIT license, so please use it within the scope of your own responsibility.<br>
+youkeyシリーズは私yuki-miyakoshiが、あると便利なライブラリを自身の技術力向上のために公開しているものです。MITライセンスで公開しているので、自己責任の範囲内でご利用いただけると幸いです。
+
 # Function Description
 
 ## int youkey_getStepperBit(`int motorPinNumber`);
