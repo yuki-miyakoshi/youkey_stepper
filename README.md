@@ -17,22 +17,25 @@ youkeyシリーズは私yuki-miyakoshiが、あると便利なライブラリを
 # Function Description
 
 ## int youkey_getStepperBit(`int motorPinNumber`);
-Function to get information whether the stepper motor should rotate or not<br>
-ステッピングモータが回転するべきかどうかの情報を取得する関数
+Function to get information whether the stepper motor should rotate or not.<br>
+ステッピングモータが回転するべきかどうかの情報を取得する関数。
 
 ### Arguments: `int motorPinNumber` (number the motors, e.g., 0 for motor 1, 1 for motor 2, 2 for motor 3)
 Note: Up to 3 motors can run at the same time.<br>
-引数:int motorPinNumber モータの番号(モータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
-注意:同時に動かせるモータは３個までです
+引数:int motorPinNumber モータの番号。(モータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)<br>
+注意:同時に動かせるモータは３個までです。
 
 ### RETURN VALUE:
-The four bool values totaling whether the motor should rotate or not. Example: If motor #0 is {true,false,false,fals}, then 8 (0b1000 in binary) Refer to examples/stepper/stepper.ino for details.<br>
+The four bool values totaling whether the motor should rotate or not.<br>
+Example: If motor #0 is {true,false,false,fals}, then 8 (0b1000 in binary) Refer to examples/stepper/stepper.ino for details.<br>
 返り値:
-モータが回転するべきかどうかのbool値が4つ合計された状態で出てきます。例:0番のモータが{true,false,false,fals}であれば、8(2進数で0b1000) 詳しくはexamples/stepper/stepper.inoを参照してください。
+モータが回転するべきかどうかのbool値が4つ合計された状態で出てきます。<br>
+例:0番のモータが{true,false,false,fals}であれば、8(2進数で0b1000)。<br>
+詳しくはexamples/stepper/stepper.inoを参照してください。
 
 ## void youkey_turnStepperMotor(`int excitation, _Bool isForward, int motorPinNumber`);
-Function to rotate a stepper motor<br>
-ステッピングモーターを回転させる関数
+Function to rotate a stepper motor.<br>
+ステッピングモーターを回転させる関数。
 
 ### Argument: `int excitation` Excitation method 
 引数:int excitation 励磁方式<br>
@@ -48,10 +51,9 @@ Function to rotate a stepper motor<br>
 
 ### Argument: `int motorPinNumber` Number of the stepper motor
 (You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)<br>
-引数:motorPinNumber ステッピングモータの番号
-(あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
+引数:motorPinNumber ステッピングモータの番号。
+(あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように。)
 
 ### Return value:
 None<br>
-返り値:
-なし
+返り値:なし
