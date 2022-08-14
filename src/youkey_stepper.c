@@ -25,7 +25,7 @@
  * 
  */
 
-#include "youkey_stepper.h"
+#include <youkey_stepper.h>
 
 static int count[3] = {0,0,0};
 static _Bool isHalf[3] = {1,1,1};
