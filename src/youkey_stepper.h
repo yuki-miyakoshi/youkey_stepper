@@ -8,12 +8,16 @@
 #ifndef STEPPER_H
 #define	STEPPER_H
 
-//------------------------------------------------
-//  プロトタイプ宣言(Prototype declaration)
-//------------------------------------------------
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
 int youkey_getStepperBit(int motorPinNumber);
 void youkey_turnStepperMotor(int excitation, _Bool isForward, int motorPinNumber);
 
-//------------------------------------------------
+#ifdef __cplusplus
+}
+#endif /* __cplusplus */
+
 #endif
 
