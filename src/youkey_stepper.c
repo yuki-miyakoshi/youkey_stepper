@@ -1,5 +1,5 @@
 /*
- * File:   steppermotor.ino
+ * File:   youkey_stepper.c
  * Author: Yuki Miyakoshi
  */
  
