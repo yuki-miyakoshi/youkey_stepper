@@ -2,12 +2,12 @@
 
 # youkey_stepper
 
-This is a library dedicated to stepping motors for Arduino and microcontrollers.
+This is a library dedicated to stepper motors for Arduino and microcontrollers.
 Since it is written in C language, it can be used with PIC microcontrollers such as 16F1827.<br>
 Arduinoやマイコン用のステッピングモータ専用ライブラリです。
 C言語で記述されているので16F1827などのPICマイコン等でも使用可能です。
 
-The excitation system of multiple stepping motors can be easily changed even during operation, and the direction of rotation of each can also be adjusted.<br>
+The excitation system of multiple stepper motors can be easily changed even during operation, and the direction of rotation of each can also be adjusted.<br>
 複数のステッピングモーターの励磁方式を動作中であっても簡単に変更することができ、また、それぞれの回転方向も調整することができます。
 
 # Function Description
@@ -42,7 +42,7 @@ Function to rotate a stepper motor<br>
  true, 正転<br>
  false, 逆転<br>
 
-### Argument: `int motorPinNumber` Number of the stepping motor
+### Argument: `int motorPinNumber` Number of the stepper motor
 (You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)<br>
 引数:motorPinNumber ステッピングモータの番号
 (あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
