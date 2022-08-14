@@ -5,7 +5,7 @@
  
 /*
  * ステッピングモーターを回転させる関数
- * youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber)
+ * youkey_turnStepperMotor(int excitation, _Bool isForward, int motorPinNumber)
 
  * 引数:excitation 励磁方式 
  *  0, 無回転
@@ -25,23 +25,23 @@
  * 
  */
 
-#include "stepper.h"
+#include "youkey_stepper.h"
 
 static int count[3] = {0,0,0};
-static bool isHalf[3] = {true,true,true};
+static _Bool isHalf[3] = {1,1,1};
 static int motorPIN_output[3] = {0,0,0};
 
-static void onePhaseOn(bool isForward, int motorPinNumber);
-static void twoPhaseOn(bool isForward, int motorPinNumber);
+static void onePhaseOn(_Bool isForward, int motorPinNumber);
+static void twoPhaseOn(_Bool isForward, int motorPinNumber);
 
-static void countUp(bool isForward, int motorPinNumber);
+static void countUp(_Bool isForward, int motorPinNumber);
 static void setMotorPinOutput(int motorPinNumber);
 
 int youkey_getStepperBit(int motorPinNumber){
   return motorPIN_output[motorPinNumber];
 }
 
-void youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber){
+void youkey_turnStepperMotor(int excitation, _Bool isForward, int motorPinNumber){
 	switch (excitation){
   case 0:
     break;
@@ -82,7 +82,7 @@ void youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber)
 static int output[3];
 
 
-static void onePhaseOn(bool isForward, int motorPinNumber){
+static void onePhaseOn(_Bool isForward, int motorPinNumber){
   output[motorPinNumber] = 0x01 << count[motorPinNumber] ;
   setMotorPinOutput(motorPinNumber);
 
@@ -90,7 +90,7 @@ static void onePhaseOn(bool isForward, int motorPinNumber){
 
 }
 
-static void twoPhaseOn(bool isForward, int motorPinNumber){
+static void twoPhaseOn(_Bool isForward, int motorPinNumber){
   
   output[motorPinNumber] = (count[motorPinNumber] != 3) ? 0x03 << count[motorPinNumber] : 0x09 ;
   setMotorPinOutput(motorPinNumber);
@@ -108,7 +108,7 @@ static void setMotorPinOutput(int motorPinNumber){
 
 };
 
-static void countUp(bool isForward, int motorPinNumber){
+static void countUp(_Bool isForward, int motorPinNumber){
 
   if(isForward){
     count[motorPinNumber] = (count[motorPinNumber] != 3) ? count[motorPinNumber] + 1 : 0 ;
