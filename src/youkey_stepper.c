@@ -2,35 +2,6 @@
  * File:   youkey_stepper.c
  * Author: Yuki Miyakoshi
  */
- 
-/*
- * Function to rotate a stepper motor
- * Up to three motors can be run at the same time
- * ステッピングモーターを回転させる関数
- * 同時に動かせるモータは３個までです
- * youkey_turnStepperMotor(int excitation, _Bool isForward, int motorPinNumber)
- *
- * Argument:excitation Excitation method 
- * 引数:excitation 励磁方式 
- *  0, no-rotation 無回転
- *  1, 1-1 phase excitation 1-1相励磁
- *  2, 2-2 phase excitation 2-2相励磁
- *  3, 1-2 phase excitation 1-2相励磁
- * 
- * Argument:isForward Whether forward or reverse
- * 引数:isForward 正転か逆転かどうか 
- *  true, 正転
- *  false, 逆転 
- * 
- * Argument: motorPinNumber Number of the stepping motor
- * (You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)
- * 引数:motorPinNumber ステッピングモータの番号
- * (あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
- * 
- * 返り値:
- * なし
- * 
- */
 
 #include <youkey_stepper.h>
 

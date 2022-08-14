@@ -1,8 +1,6 @@
 /* 
  * File:   youkey_stepper.h
  * Author: Yuki Miyakoshi
- *
- * Created on May 12, 2022, 4:11 PM
  */
 
 #ifndef STEPPER_H
