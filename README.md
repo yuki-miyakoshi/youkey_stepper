@@ -50,9 +50,7 @@ Function to rotate a stepper motor.<br>
  false, 逆転<br>
 
 ### Argument: `int motorPinNumber` Number of the stepper motor
-(You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)<br>
 引数:motorPinNumber ステッピングモータの番号。
-(あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように。)
 
 ### Return value:
 None<br>
