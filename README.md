@@ -2,7 +2,7 @@
 
 # youkey_stepper
 
-motors for Arduino and microcontrollers.
+This is a library dedicated to stepping motors for Arduino and microcontrollers.
 Since it is written in C language, it can be used with PIC microcontrollers such as 16F1827.<br>
 Arduinoやマイコン用のステッピングモータ専用ライブラリです。
 C言語で記述されているので16F1827などのPICマイコン等でも使用可能です。
