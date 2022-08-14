@@ -25,27 +25,27 @@ The four bool values totaling whether the motor should rotate or not. Example: I
 モータが回転するべきかどうかのbool値が4つ合計された状態で出てきます。例:0番のモータが{true,false,false,fals}であれば、8(2進数で0b1000) 詳しくはexamples/stepper/stepper.inoを参照してください。
 
 ## void youkey_turnStepperMotor(`int excitation, _Bool isForward, int motorPinNumber`);
-Function to rotate a stepper motor 
+Function to rotate a stepper motor  
 ステッピングモーターを回転させる関数
 
 ### Argument: `int excitation` Excitation method 
-引数:int excitation 励磁方式 
- 0, no-rotation 無回転
- 1, 1-1 phase excitation 1-1相励磁
- 2, 2-2 phase excitation 2-2相励磁
- 3, 1-2 phase excitation 1-2相励磁
+引数:int excitation 励磁方式  
+ 0, no-rotation 無回転  
+ 1, 1-1 phase excitation 1-1相励磁  
+ 2, 2-2 phase excitation 2-2相励磁  
+ 3, 1-2 phase excitation 1-2相励磁  
 
 ### Argument: `bool isForward` Whether forward or reverse
-引数:bool isForward 正転か逆転かどうか 
- true, 正転
- false, 逆転 
+引数:bool isForward 正転か逆転かどうか  
+ true, 正転  
+ false, 逆転  
 
 ### Argument: `int motorPinNumber` Number of the stepping motor
-(You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)
+(You number the motors, e.g., 0 for motor #1, 1 for motor #2, 2 for motor #3, etc.)  
 引数:motorPinNumber ステッピングモータの番号
 (あなたがモータに番号をつけてください。1番モータは0,2番モータは1,3番モータは2のように)
 
 ### Return value:
-None
+None  
 返り値:
 なし
