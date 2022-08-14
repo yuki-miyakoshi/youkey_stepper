@@ -1,4 +1,11 @@
+##########################################
+# Datatypes (KEYWORD1)
+##########################################
+
+youkey_getStepperBit KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-getStepperBit	KEYWORD2
+
+youkey_turnStepperMotor	KEYWORD2

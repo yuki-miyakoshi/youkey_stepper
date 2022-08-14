@@ -11,8 +11,8 @@
 //------------------------------------------------
 //  プロトタイプ宣言(Prototype declaration)
 //------------------------------------------------
-int getStepperBit(int motorPinNumber);
-void turnStepperMotor(int excitation, bool isForward, int motorPinNumber);
+int youkey_getStepperBit(int motorPinNumber);
+void youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber);
 
 //------------------------------------------------
 #endif

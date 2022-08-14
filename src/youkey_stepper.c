@@ -5,7 +5,8 @@
  
 /*
  * ステッピングモーターを回転させる関数
- * turnStepperMotor(int excitation, bool isForward, int motorPinNumber)
+ * youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber)
+
  * 引数:excitation 励磁方式 
  *  0, 無回転
  *  1, 1-1相励磁
@@ -16,20 +17,12 @@
  *  true, 正転
  *  false, 逆転 
  * 
- * 引数:motorPinNumber ステッピングモータのPIN番号;
+ * 引数:motorPinNumber ステッピングモータの番号
+ * (あなたがモータに番号をつけてください。1個だけモータを使っていたら0です。)
  * 
  * 返り値:
  * なし
  * 
- * motorPIN_output[][] 返り値はありませんが、この配列にbool値が代入されます。
- * 例
- * 1-2相励磁,正回転,3番目のモータの場合
- * turnStepperMotor(3,true,2);
- * digitalWrite(2,motorPIN_output[2][0]);
- * digitalWrite(3,motorPIN_output[2][1]);
- * digitalWrite(4,motorPIN_output[2][2]);
- * digitalWrite(5,motorPIN_output[2][3]);
-
  */
 
 #include "stepper.h"
@@ -44,11 +37,11 @@ static void twoPhaseOn(bool isForward, int motorPinNumber);
 static void countUp(bool isForward, int motorPinNumber);
 static void setMotorPinOutput(int motorPinNumber);
 
-int getStepperBit(int motorPinNumber){
+int youkey_getStepperBit(int motorPinNumber){
   return motorPIN_output[motorPinNumber];
 }
 
-void turnStepperMotor(int excitation, bool isForward, int motorPinNumber){
+void youkey_turnStepperMotor(int excitation, bool isForward, int motorPinNumber){
 	switch (excitation){
   case 0:
     break;
